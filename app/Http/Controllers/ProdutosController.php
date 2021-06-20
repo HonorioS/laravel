@@ -25,7 +25,7 @@ class ProdutosController extends Controller
 
 
         if ($nome) {
-            return "o nome do produto é $nome, e o  seu valor é  $valor ";
+            return "o nome do produto é $nome, e o  seu valor é  $valor €";
         } else {
             return -1;
         }
