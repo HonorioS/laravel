@@ -11,7 +11,9 @@
 <body>
 
     <h1>pagina principal Produtos  </h1>
-
+    <p> @foreach($produtos as $produto) </p>
+    <p> {{$produto}} </p>
+    @endforeach
 </body>
 
 </html>
