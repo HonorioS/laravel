@@ -10,7 +10,7 @@
 
 <body>
 
-    <h1> o nome do produto é <?php echo $nome ?> </h1>
+    <h1> o nome do produto é <?php echo $nome ?>  e o seu valor é <?php echo $valor ?> </h1>
 
 </body>
 

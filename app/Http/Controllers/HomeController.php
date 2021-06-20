@@ -9,6 +9,7 @@ class HomeController extends Controller
 
     public function __invoke()
     {
-        return "voce entrou na raiza da aplicação HOME";
+       // return "voce entrou na raiza da aplicação HOME";
+        return view('home');
     }
 }
