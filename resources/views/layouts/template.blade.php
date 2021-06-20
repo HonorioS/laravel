@@ -57,9 +57,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Scripts DataTables4  -->
-    <script src="{{ URL::asset('assets/datatables/jquery.dataTables.min.js')}}"></script>
-    <script src="{{ URL::asset('assets/datatables/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{ URL::asset('assets/datatables/datatables-demo.js') }}"></script>
+    <script src="{{ URL::asset('assets/datatables5/jquery.dataTables.min.js')}}"></script>
+    <script src="{{ URL::asset('assets/datatables5/dataTables.bootstrap5.min.js')}}"></script>
+    <script src="{{ URL::asset('assets/datatables5/dataTables-custom-scripts.js') }}"></script>
 </body>
 
 </html>
