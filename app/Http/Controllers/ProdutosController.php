@@ -10,7 +10,9 @@ class ProdutosController extends Controller
 
     public function index()
     {
-        $produtos = produto::all();
+        $produtos = produto::all(); // all: carrega todos dados da tabela
+       // $produtos = produto::paginate(); // all: carrega todos dados da tabela
+
         return view('produtos.index', ['produtos' => $produtos]);
 
     }
