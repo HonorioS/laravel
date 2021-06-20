@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    return "ola laravel";
-});
+Route::get('/', HomeController::class );
+
+// Route::get('/', function () {
+    //  return view('welcome');
+  // return "ola laravel";
+// });
