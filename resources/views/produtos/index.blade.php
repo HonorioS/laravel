@@ -4,7 +4,7 @@
 
 <div class="container mt-2">
 
-    <a href="produtos/create" class="mt-4 mb-4 btn btn-primary" type="submit">Adicionar Produto</a>
+    <a href="{{route('produtos.create')}}" class="mt-4 mb-4 btn btn-primary" type="submit">Adicionar Produto</a>
 
     <!-- DataTales Example -->
     <div class="card  mb-4">
@@ -18,7 +18,9 @@
                             <th>ID</th>
                             <th>Nome</th>
                             <th>Descrição</th>
-                            <th>valor</th>
+                            <th>Valor</th>
+                            <th>Ação</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -28,6 +30,11 @@
                             <td>{{$produto -> Nome}}</td>
                             <td>{{$produto -> descricao}}</td>
                             <td>{{$produto -> valor}}</td>
+                            <td>
+                                <a href="{{route('produtos.show', $produto ->ID)}}">
+                                    <i class="fas fa-eye text-dark" style="cursor:pointer;"></i>
+                                </a>
+                            </td>
                         </tr>
                         @endforeach
                     <tbody>

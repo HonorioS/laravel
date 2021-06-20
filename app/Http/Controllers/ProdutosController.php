@@ -24,15 +24,15 @@ class ProdutosController extends Controller
         return view('produtos.create');
     }
 
-    public function show($nome, $valor)
-    {
+    public function show($id){
 
-        return view('produtos.show', ['nome' => $nome, 'valor' => $valor]);
-
-        // if ($nome) {
-        // return "o nome do produto é $nome, e o  seu valor é  $valor €";
-        // } else {
-        // return -1;
-        // }
+        return view('produtos.show', ['id' => $id]);
     }
+
+    // public function show($nome, $valor)
+    // {
+
+        // return view('produtos.show', ['nome' => $nome, 'valor' => $valor]);
+
+    // }
 }
