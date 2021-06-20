@@ -11,28 +11,46 @@
 
         <div class="card-body">
             <div class="table-responsive">
-                <!-- <table class="table" id="dataTable" width="100%" cellspacing="0"> -->
+
                 <table id="example" class="table table-striped" style="width:100%">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Nome</th>
-                            <th>Descrição</th>
-                            <th>Valor</th>
-                            <th>Ações</th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
                         </tr>
                     </thead>
-
                     <tbody>
-                        @foreach($produtos as $produto)
                         <tr>
-                            <td scope="row">{{$produto -> ID}}</td>
-                            <td>{{$produto -> Nome}}</td>
-                            <td>{{$produto -> descricao}}</td>
-                            <td>{{$produto -> valor}}</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
                         </tr>
-                        @endforeach
-                    </tbody>
+
+                        <tr>
+                            <td>Donna Snider</td>
+                            <td>Customer Support</td>
+                            <td>New York</td>
+                            <td>27</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Cara Stevens</td>
+                            <td>Sales Assistant</td>
+                            <td>New York</td>
+                            <td>46</td>
+                            <td>2011/12/06</td>
+                            <td>$145,600</td>
+                        </tr>
+                    <tbody>
                 </table>
             </div>
         </div>
