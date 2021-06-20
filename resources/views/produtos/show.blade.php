@@ -3,14 +3,13 @@
 @section('content')
 
 <?php
-
 $format_value = number_format($produto->valor, 2, ',', '.');
 ?>
 
 <!-- jumbotron v5 -->
 <div class="bg-light p-5 rounded-lg m-3">
-    <h1 class="display-4"> <?php echo $produto->Nome ?> - Valor € <?php echo $format_value ?> </h1>
-    <p class="lead"><?php echo $produto->descricao ?></p>
+    <h1 class="display-4"> <?php echo $produto->Nome ?> </h1>
+    <p class="lead"><?php echo $produto->descricao ?> - Preço € <?php echo $format_value ?> </p>
     <hr class="my-4">
     <p>
         Lorem Ipsum is simply dummy text of the printing and
