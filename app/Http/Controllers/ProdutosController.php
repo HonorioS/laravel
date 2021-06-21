@@ -10,10 +10,9 @@ class ProdutosController extends Controller
 
     public function index()
     {
-       // $produtos = produto::all(); // all: carrega todos dados da tabela
+        // $produtos = produto::all(); // all: carrega todos dados da tabela
         $produtos = produto::paginate(); // all: carrega todos dados da tabela
         return view('produtos.index', ['produtos' => $produtos]);
-
     }
 
     public function create()
@@ -22,16 +21,27 @@ class ProdutosController extends Controller
         return view('produtos.create');
     }
 
-    public function show($id){
+    public function show($id)
+    {
 
         $produto = produto::find($id);
         return view('produtos.show', ['produto' => $produto]);
     }
 
+    public function insert(Request $request)
+    {
+        $produto = new produto();
+        $produto->Nome = $request->nome;
+        $produto->descricao = $request->descricao;
+        $produto->valor = $request->valor;
+        $produto->save();
+        return redirect()->route('produtos');
+    }
+
     // public function show($nome, $valor)
     // {
 
-        // return view('produtos.show', ['nome' => $nome, 'valor' => $valor]);
+    // return view('produtos.show', ['nome' => $nome, 'valor' => $valor]);
 
     // }
 }
