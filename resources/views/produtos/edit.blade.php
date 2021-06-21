@@ -10,7 +10,7 @@
 
     <form method="POST" action="{{route('produtos.editar', $produto)}}">  
     @csrf
-    @method('put')
+    @method('put');
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nome Produto</label>
             <input type="text" class="form-control" id="frNomeProduto" name="nome" value="{{$produto->Nome}}">
