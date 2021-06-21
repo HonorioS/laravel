@@ -8,9 +8,9 @@
 
 <h4>Pagina editar  produto com Recurso Blade</h4>
 
-    <form method="POST" action="{{route('produtos.editar', $produto)}}">  
+    <form method="POST" action="{{route('produtos.editar',$produto->ID)}}">  
     @csrf
-    @method('put');
+    @method('put')
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nome Produto</label>
             <input type="text" class="form-control" id="frNomeProduto" name="nome" value="{{$produto->Nome}}">
