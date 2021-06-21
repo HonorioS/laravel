@@ -39,7 +39,7 @@
                             </td>
 
                             <td>
-                                <a title="Editar dados  do Produto" href="#">
+                                <a title="Editar dados  do Produto" href="{{route('produtos.edit', $produto ->ID)}}">
                                     <i class="fas fa-edit text-warning" style="cursor:pointer;"></i>
                                 </a>
                             </td>

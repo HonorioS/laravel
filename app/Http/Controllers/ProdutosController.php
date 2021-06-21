@@ -38,6 +38,18 @@ class ProdutosController extends Controller
         return redirect()->route('produtos');
     }
 
+    public function edit($id){
+
+       //return view('produtos.edit', ['produto' => $produto]);
+    }
+
+
+    public function editar(produto $produto){
+
+       // return view('produtos.edit', ['produto' => $produto]);
+     }
+
+
     // public function show($nome, $valor)
     // {
 
