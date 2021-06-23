@@ -8,7 +8,9 @@
 
 <h4>Pagina editar  produto com Recurso Blade</h4>
 
-    <form method="POST" action="{{route('produtos.update',$produto->ID)}}">  
+
+    <!-- <form method="POST" action="{{route('produtos.update',$produto->ID)}}">   -->
+    <form method="post" action="{{route('produtos.update')}}"> 
     @csrf
      @method('put')
         <div class="mb-3">

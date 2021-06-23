@@ -47,9 +47,10 @@ class ProdutosController extends Controller
 
     public function update(Request $request)
     {
+
         $produto = produto::find($request->pdID);
         $produto->Nome = $request->nome;
-        $produto->descricao = $request->descricao;  
+        $produto->descricao = $request->descricao;
         $produto->valor = $request->valor;
         $produto->save();
         return redirect()->route('produtos');
