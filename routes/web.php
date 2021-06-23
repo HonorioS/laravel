@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\UtilizadorController;
 
-
-Route::get('/', HomeController::class );
+Route::get('/', HomeController::class )->name('home');;
 
 Route::get('produtos', [ProdutosController::class, 'index'] )-> name('produtos');
 
@@ -20,6 +20,9 @@ Route::get('produtos/{produto}/edit',[ProdutosController::class, 'edit'] )-> nam
 Route::put('produtos/update',[ProdutosController::class, 'update'] )-> name('produtos.update');
 
 Route::delete('produtos/{produto}/delet',[ProdutosController::class, 'delet'] )-> name('produtos.delet');
+
+Route::post('utilizador/login',[UtilizadorController::class, 'login'] )-> name('user.login');
+Route::get('utilizador/logout',[UtilizadorController::class, 'logout'] )-> name('user.logout');
 
 
 

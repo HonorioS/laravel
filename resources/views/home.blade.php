@@ -18,27 +18,36 @@
 </head>
 
 <body>
-<div class="wrapper">
-    <div class="card">
-        <form action="#" class="d-flex flex-column">
-            <div class="h3 text-center text-white">Login</div>
-            <div class="d-flex align-items-center input-field my-3 mb-4"> <span class="far fa-user p-2"></span> <input type="text" placeholder="Username or Email" required class="form-control"> </div>
-            <div class="d-flex align-items-center input-field mb-4"> <span class="fas fa-lock p-2"></span> <input type="password" placeholder="Password" required class="form-control" id="pwd"> <button class="btn btn-showPasswordn"> <span class="fas fa-eye-slash"></span> </button> </div>
-            <div class="d-sm-flex align-items-sm-center justify-content-sm-between">
-                <div class="d-flex align-items-center"> <label class="option"> <span class="text-light-white">Remember Me</span> <input type="checkbox" checked> <span class="checkmark"></span> </label> </div>
-                <div class="mt-sm-0 mt-3"><a href="#">Forgot password?</a></div>
+
+    <div class="container my-5  py-5 z-depth-1">
+
+        <section class="px-md-5 mt-5 mx-md-5 text-center text-lg-left dark-grey-text">
+
+            <div class="row d-flex mt-5 justify-content-center">
+
+                <div class="col-md-6">
+
+                    <form class="text-center"  action="{{route('user.login')}}" method="POST">
+                        @csrf
+                        <p class="h4 mb-4">Login</p>
+
+                        <!-- Email -->
+                        <input type="email" id="email" name="email" class="form-control mb-4" placeholder="E-mail">
+
+                        <!-- Name -->
+                        <input type="password" name="senha" id="idSenha" class="form-control mb-4" placeholder="Password">
+
+                        <button class="btn btn-info btn-block" type="submit">Entrar</button>
+
+                    </form>
+
+                </div>
+
             </div>
-            <div class="my-3"> <input type="submit" value="Login" class="btn btn-primary"> </div>
-            <div class="mb-3"> <span class="text-light-white">Don't have an account?</span> <a href="#">Sign Up</a> </div>
-        </form>
-        <div class="position-relative border-bottom my-3 line"> <span class="connect">or connect with</span> </div>
-        <div class="text-center py-3 connections"> <a href="https://wwww.facebook.com" target="_blank" class="px-2"> <img src="https://www.dpreview.com/files/p/articles/4698742202/facebook.jpeg" alt=""> </a> <a href="https://www.google.com" target="_blank" class="px-2"> <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png" alt=""> </a> <a href="https://www.github.com" target="_blank" class="px-2"> <img src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png" alt=""> </a> </div>
+
+        </section>
+
     </div>
-</div>
-
-
-
-
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

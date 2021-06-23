@@ -1,6 +1,22 @@
+
+<?php
+
+@session_start();
+// 
+// if (@$_SESSION['nome']==null) {
+// 
+    // return redirect()->route('home');
+    // 
+    // echo "<script language='javascript'> window.location='./'</script>";
+// }
+
+
+?>
+
 @extends('layouts.template')
 @section('title', 'Produtos')
 @section('content')
+
 
 <div class="container mt-2">
 
@@ -59,7 +75,6 @@
 
 </div>
 
-
 <!--  modal delete produto  -->
 
 <div class="modal" tabindex="-1" id="exampleModal">
@@ -70,14 +85,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4 class="text-dark text-center">Deseja Apagar o Seguinte Produto ?  </h4>
+                <h4 class="text-dark text-center">Deseja Apagar o Seguinte Produto ? </h4>
             </div>
             <div class="modal-footer justify-content-center">
                 <form action="{{route('produtos.delet', $produto ->ID)}}" method="POST">
-                @csrf
-                @method('delete')
+                    @csrf
+                    @method('delete')
                     <button type="submit" class="btn btn-secondary bg-danger">Excluir</button>
-                </form>  
+                </form>
                 <button type="button" class="btn btn-primary  bg-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
         </div>

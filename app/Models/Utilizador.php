@@ -4,9 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
-class produto extends Model
+class Utilizador extends Model
 {
+    public $timestamps = false;
     use HasFactory;
-    public $timestamps=false;
+   
+   
 }
