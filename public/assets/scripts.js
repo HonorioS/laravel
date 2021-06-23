@@ -6,3 +6,12 @@ function showPassword() {
         password.type = "password";
     }
 }
+
+
+$(document).ready(function() {
+
+    $(".btn-showPasswordn").click(function() {
+        showPassword()
+    })
+
+})
