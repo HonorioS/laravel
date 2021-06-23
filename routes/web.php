@@ -17,8 +17,9 @@ Route::post('produtos',[ProdutosController::class, 'insert'] )-> name('produtos.
 
 Route::get('produtos/{produto}/edit',[ProdutosController::class, 'edit'] )-> name('produtos.edit');
 
-// Route::put('produtos/{produto}',[ProdutosController::class, 'update'] )-> name('produtos.update');
 Route::put('produtos/update',[ProdutosController::class, 'update'] )-> name('produtos.update');
+
+Route::get('produtos/{produto}/delet',[ProdutosController::class, 'delet'] )-> name('produtos.delet');
 
 
 

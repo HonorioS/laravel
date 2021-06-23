@@ -45,7 +45,7 @@
                             </td>
 
                             <td>
-                                <a title="Apagar Produto" href="#">
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" title="Apagar Produto">
                                     <i class="fas fa-trash text-danger" style="cursor:pointer;"></i>
                                 </a>
                             </td>
@@ -57,5 +57,26 @@
         </div>
     </div>
 
+</div>
+
+
+<!--  modal delete produto  -->
+
+<div class="modal" tabindex="-1" id="exampleModal" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Deletar Produto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Deseja Apagar o Seguinte Produto ? </p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Sim</button>
+                <button type="button" class="btn btn-primary  bg-success">Não</button>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

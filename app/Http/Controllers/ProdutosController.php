@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\produto;
+use App\Models\Produto;
 use Illuminate\Http\Request;
 
 class ProdutosController extends Controller
@@ -11,7 +11,7 @@ class ProdutosController extends Controller
     public function index()
     {
         // $produtos = produto::all(); // all: carrega todos dados da tabela
-        $produtos = produto::paginate(); // all: carrega todos dados da tabela
+        $produtos = Produto::paginate(); // all: carrega todos dados da tabela
         return view('produtos.index', ['produtos' => $produtos]);
     }
 
@@ -24,13 +24,13 @@ class ProdutosController extends Controller
     public function show($id)
     {
 
-        $produto = produto::find($id);
+        $produto = Produto::find($id);
         return view('produtos.show', ['produto' => $produto]);
     }
 
     public function insert(Request $request)
     {
-        $produto = new produto();
+        $produto = new Produto();
         $produto->Nome = $request->nome;
         $produto->descricao = $request->descricao;
         $produto->valor = $request->valor;
@@ -38,7 +38,7 @@ class ProdutosController extends Controller
         return redirect()->route('produtos');
     }
 
-    public function edit(produto $produto)
+    public function edit(Produto $produto)
     {
         // return $produto;
         return view('produtos.edit', ['produto' => $produto]);
@@ -48,11 +48,19 @@ class ProdutosController extends Controller
     public function update(Request $request)
     {
 
-        $produto = produto::find($request->pdID);
+        $produto = Produto::find($request->pdID);
         $produto->Nome = $request->nome;
         $produto->descricao = $request->descricao;
         $produto->valor = $request->valor;
         $produto->save();
+        return redirect()->route('produtos');
+    }
+
+    public function delet($id)
+    {
+
+        $produto = Produto::find($id);
+        $produto->delete();
         return redirect()->route('produtos');
     }
 
