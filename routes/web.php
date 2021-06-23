@@ -19,7 +19,7 @@ Route::get('produtos/{produto}/edit',[ProdutosController::class, 'edit'] )-> nam
 
 Route::put('produtos/update',[ProdutosController::class, 'update'] )-> name('produtos.update');
 
-Route::get('produtos/{produto}/delet',[ProdutosController::class, 'delet'] )-> name('produtos.delet');
+Route::delete('produtos/{produto}/delet',[ProdutosController::class, 'delet'] )-> name('produtos.delet');
 
 
 

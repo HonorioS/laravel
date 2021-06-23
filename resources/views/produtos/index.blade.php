@@ -62,7 +62,7 @@
 
 <!--  modal delete produto  -->
 
-<div class="modal" tabindex="-1" id="exampleModal" >
+<div class="modal" tabindex="-1" id="exampleModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -70,11 +70,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Deseja Apagar o Seguinte Produto ? </p>
+                <h4 class="text-dark text-center">Deseja Apagar o Seguinte Produto ?  </h4>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Sim</button>
-                <button type="button" class="btn btn-primary  bg-success">Não</button>
+                <form action="{{route('produtos.delet', $produto ->ID)}}" method="POST">
+                @csrf
+                @method('delete')
+                    <button type="submit" class="btn btn-secondary bg-danger">Excluir</button>
+                </form>  
+                <button type="button" class="btn btn-primary  bg-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
         </div>
     </div>
