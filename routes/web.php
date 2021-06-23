@@ -18,7 +18,7 @@ Route::post('produtos',[ProdutosController::class, 'insert'] )-> name('produtos.
 
 Route::get('produtos/{produto}/edit',[ProdutosController::class, 'edit'] )-> name('produtos.edit');
 
-Route::put('produtos/{produto}',[ProdutosController::class, 'editar'] )-> name('produtos.editar');
+Route::put('produtos/{produto}',[ProdutosController::class, 'update'] )-> name('produtos.update');
 
 
 

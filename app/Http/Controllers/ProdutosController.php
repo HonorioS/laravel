@@ -40,18 +40,16 @@ class ProdutosController extends Controller
 
     public function edit(produto $produto)
     {
-
         // return $produto;
         return view('produtos.edit', ['produto' => $produto]);
     }
 
 
-    public function editar(Request $request)
+    public function update(Request $request)
     {
-
-        $produto = new produto();
+        $produto = produto::find($request->pdID);
         $produto->Nome = $request->nome;
-        $produto->descricao = $request->descricao;
+        $produto->descricao = $request->descricao;  
         $produto->valor = $request->valor;
         $produto->save();
         return redirect()->route('produtos');
